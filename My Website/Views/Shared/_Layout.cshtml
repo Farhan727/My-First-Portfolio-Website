@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="X-UA-Compitable" content="ie-edge">
+    <title>My Project Navbar</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="~/css/all.css" /> <!--font awesome icons file-->
+    <link rel="stylesheet" href="~/css/Project.css" /> <!--Project CSS file-->
+    <script defer src="Project_JavaScript_Code.js"></script> <!--use 'defer' keyword its advantage is that when our html page is loading our JS code also automatically loading ,it js code fast to load and run-->
+    
+     </head>
+<body>
+   
+    <!--Header section we say this navigation menu-->
+
+     <header>
+
+            <div class="header-section"> <!--header section part-->
+            <div class="logo"> <!--logo part-->
+                <h1>Company logo</h1>
+            </div> <!--logo part-->
+
+            <nav class="navigation-menu"> <!--Navigation links part-->
+
+                <ul class="navigation-list"> 
+
+                    <li><a href="#" class="navbar-link home-link">HOME</a></li>
+                    <li> @Html.ActionLink("About Us", "About" , "home") <a href="about.html" class="navbar-link about-link"></a></li>
+                    <li> @Html.ActionLink("services", "Services" , "home")<a href="about_Us.html" class="navbar-link services-link"></a></li>
+                    <li> @Html.ActionLink("portfolio", "Portfolio" , "home") <a href="#" class="navbar-link portfolio-link"></a></li>
+                    <li>@Html.ActionLink("Contact Us", "Contact" , "home")<a href="#" class="navbar-link contact-link"></a></li>
+
+                </ul>
+
+            </nav> <!--Navigation links part-->
+
+            </div> <!--header+navigation part-->
+
+        </header> <!--end of header or say navbar menu-->
+
+    <!--/*==============================================================
+                  
+                     Footer Section Starting from Here... 
+    
+================================================================= */ -->
+
+
+        <footer class="footer-section">
+
+            <div class="grid-four-columns container"> <!-- grid-four-columns-->
+
+                <div class="footer-about">
+
+                    <div>
+
+                    <h3>About</h3>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur iusto illum necessitatibus, possimus adipisci.</p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>Links</h3>  <!-- section of services -->
+
+                    <ul>
+                        <li> <span><i class="fa-solid fa-arrow-right-long"></i></span><a href="">Home</a></li>
+                        <li> <span><i class="fa-solid fa-arrow-right-long"></i></span><a href="">Home</a></li>
+                        <li> <span><i class="fa-solid fa-arrow-right-long"></i></span><a href="">Home</a></li>
+                        <li> <span><i class="fa-solid fa-arrow-right-long"></i></span><a href="">Home</a></li>
+                        <li> <span><i class="fa-solid fa-arrow-right-long"></i></span><a href="">Home</a></li>
+                    </ul>
+
+                </div> <!-- section of services end-->
+
+
+                <div class="footer-services">
+
+                    <h3>Services</h3>  <!-- section of services -->
+
+                    <ul>
+                        <li> <span><i class="fa-solid fa-arrow-right-long"></i></span><a href="">Home</a></li>
+                        <li> <span><i class="fa-solid fa-arrow-right-long"></i></span><a href="">Home</a></li>
+                        <li> <span><i class="fa-solid fa-arrow-right-long"></i></span><a href="">Home</a></li>
+                        <li> <span><i class="fa-solid fa-arrow-right-long"></i></span><a href="">Home</a></li>
+                        <li> <span><i class="fa-solid fa-arrow-right-long"></i></span><a href="">Home</a></li>
+                    </ul>
+
+                </div> <!-- section of services end-->
+
+
+                <div class="footer-questions"> <!-- section of address start-->
+
+
+                    <h3>Have a Questions</h3>
+
+                    <address>
+                       
+                     <div>
+                            <p>
+                                <span><i class="fa-solid fa-house-user"></i></span>
+                                Sialkot, Pakistan.
+                            </p>
+                        </div>
+
+                        <div>
+                            <p>
+                                <span><i class="fa-solid fa-envelope"></i></span>
+                                <a href="mailto:farhanalifani727@gmail.com">farhanalifani727@gmail.com</a>
+                            </p>
+                        </div>
+
+                        <div>
+                            <p>
+                                <span><i class="fa-solid fa-phone-flip"></i></span>
+                                <a href="tel:+923078907606"> +92307 89076 06</a>
+                            </p>
+                        </div>
+
+                    </address>
+
+                </div> <!-- section of address end-->
+
+
+
+             </div> <!-- grid-four-columns end-->
+
+        
+             <!-- social icons in footer start section-->
+
+             <div class="footer-social-icons container"> <!-- social icons in footer start section-->
+
+                <div class="icons">
+
+                    <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+
+                </div> <!--icons div end-->
+
+                <div class="footer-credits">
+
+                    <p> Copyright by Farhan Ali ❤❤❤ .</p>
+
+                </div>
+                
+             </div> <!-- social icons in div container footer section ended-->
+             
+       
+        </footer>
+
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
